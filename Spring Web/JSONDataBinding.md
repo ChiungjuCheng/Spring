@@ -1,10 +1,4 @@
----
-output: html_document
-params: 
-    new_title: "My Title!"
-title: "``r params$new_title` test paste`"
----
-#JSON Data binding
+# JSON Data binding
 是指讓JSON物件轉換成Java pojo物件，在java內可以使用Jackson套件來做轉換，他只會呼叫setXXX()方法來設定屬性，不會直接使用private file。
 
 ####JSON to JAVA POJO and JAVA POJO TO JSON
