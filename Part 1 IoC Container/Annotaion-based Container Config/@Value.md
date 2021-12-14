@@ -63,6 +63,8 @@ public class PropertySourcesPlaceholderConfig {
 }
 ```
 
+# Spring boot
+ Spring boot的default設定是application.xml或application.properties。
 
 
 #### 備註
