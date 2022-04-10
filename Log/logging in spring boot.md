@@ -33,3 +33,51 @@ class CocalendarApplicationTests {
 
 }
 ```
+
+# 使用@Slf4j
+
+## Eclipse 安裝
+1. 下載Lombok Jar File，隨便在一個專案放入，讓本地的maven儲存庫有Lombok Jar File
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.22</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+2. Installing Lombok
+執行lombok-1.18.22.jar，並指定安裝路徑為eclipse.exe路徑
+```
+java -jar lombok-1.18.22.jar
+```
+  
+
+
+### 使用
+1. maven
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.22</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+2. java
+```java
+@Slf4j
+@RestController
+public class MyBatisController {
+	@GetMapping("/query/{primarykey}")
+	public Blog queryMybatis(@PathVariable("primarykey") int primarykey) {
+		log.info("testxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		return blogMapper.selectByPrimaryKey(primarykey).orElse(new com.example.mybatis.spring.model.Blog());
+	}
+}
+```
+
+### 參考
+https://howtodoinjava.com/lombok/lombok-eclipse-installation-examples/
